@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حكايتنا ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .timer-section {
+            padding: 40px 10px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            margin-bottom: 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .timer-display {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .time-unit {
+            background: #ff4d6d;
+            padding: 10px;
+            border-radius: 12px;
+            min-width: 70px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .time-unit span { display: block; font-size: 22px; font-weight: bold; }
+        .time-unit label { font-size: 13px; }
+
+        .gallery {
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            margin-bottom: 40px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card img { 
+            width: 100%; 
+            display: block; 
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .card-text {
+            padding: 25px;
+            line-height: 1.8;
+            font-size: 19px;
+            background: rgba(0,0,0,0.6);
+            font-weight: bold;
+        }
+
+        .btn-main {
+            background: #ff4d6d;
+            color: white;
+            border: none;
+            padding: 18px 50px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 40px 0 60px 0;
+            font-family: 'Cairo';
+            box-shadow: 0 5px 25px rgba(255, 77, 109, 0.6);
+        }
+
+        #final-message {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.98);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 40px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .msg-content {
+            max-width: 650px;
+            margin: auto;
+            line-height: 2;
+            font-size: 22px;
+            text-align: center;
+            color: #ffeef0;
+        }
+
+        .tiktok-btn {
+            background: #fff;
+            color: #000;
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onclick="playMusic()">
+
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <section class="timer-section">
+        <h2 style="margin:0;">بقالنا مع بعض ❤️</h2>
+        <div class="timer-display" id="timer"></div>
+    </section>
+
+    <div class="gallery">
+        <div class="card">
+            <img src="pic1.jpg">
+            <div class="card-text">شكرا لأنك قوس قزح الجميل لي بعد العاصفة 🌈❤️</div>
+        </div>
+
+        <div class="card">
+            <img src="pic2.jpg">
+            <div class="card-text">شكرا لوجودك جنبي وربنا يديمك نعمه عليا 🌸✨</div>
+        </div>
+
+        <button class="btn-main" onclick="showMsg()">دوسي هنا يا عمري ❤️</button>
+    </div>
+
+    <div id="final-message" style="display: none;">
+        <div class="msg-content">
+          عوزاك تعرف بجد إن مهما حصل بينا، صدقني مش هخلي الكلام يخلص ولا ينفع يخلص، ده أنا ماليش غيرك.. 🥺 حقك عليا يا عيوني في كل مرة زعلتك فيها، أقسم بالله مستحيل حد يحبك نص الحب اللي بحبهولك، وعهد الله بحبك أكتر من نفسي. ❤️ حرفياً بقيت بالنسبة لي كل حاجة، ما بتعدي دقيقة غير وأنا بفكر فيك وفي اليوم اللي هفضل فيه معاك عمري كله. 💍✨
+​أنا مش محتاجة حد طول ما أنت موجود، أنت عرفت تطمني وتصلح حاجات كتير جوايا وتخليني أحبك أوي كدة.. 🥰 أي حاجة بتحصل معايا مش بيجي في بالي غيرك، ونفسي أفضل معاك الوقت كله وما يجيش دقيقة وأنت مش معايا فيها. بجد يا عبدالله، أنت بقيت حياتي وما أقدرش أتخيل عمري من غيرك.. 🌎💞 استحمل بنوتك وما تزهقش مني، مفيش حد بيسمعني ويطمني قدك. ✨👧🏻
+​يارب يخليك ليا يا عيوني، هتفضل الوحيد اللي واخد يومي وتفكيري، ولو الدنيا كلها في كفة وأنت في كفة، هختارك أنت وهفضل أختارك طول عمري.. لأنك أحسن اختيار أنا اخترته بجد. 💎🙌 أنت عوضي عن كل حاجة وحشة حصلتلي، وطول ما أنا معاك أنا أكتر حد في الدنيا مبسوط. 🌙💖
+​بجد يا عبودي، أنت روحي وعيوني، ربنا يديمك ليا وتفضل معايا طول عمري.. بحب عيونك وصوتك وكل تفصيلة فيك. 👀 نبرة صوتك بجد أمان ليا. وأهم حاجة إنك بتاعي لوحدي، مش هشارك فيك حد أبداً.. هتفضل بتاعي وليا لوحدي اتفقنا؟ 🤨🔪 قولتلك أنت ملكي أنا بس. 😜❤️
+​أنا أسفة بجد لو زعلتك في يوم، حقك عليا يا حبيبي.. بحبك أوي يا أحلى عبدالله في الدنيا، يا أحلى صدفة في حياتي، ربنا ما يحرمني منك أبداً ونفضل مع بعض لآخر لحظة. 🫂♥️🧿
+ولو حبيت غيري هقتلك او بصيت حتي😂♥
+            <br>
+            <a href="https://vt.tiktok.com/ZSmGtwC5K/" class="tiktok-btn">دوس هنا ♥</a>
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            document.getElementById("bgMusic").play();
+        }
+
+        function updateTimer() {
+            const startDate = new Date("2025-05-14T00:00:00");
+            const now = new Date();
+            
+            let years = now.getFullYear() - startDate.getFullYear();
+            let months = now.getMonth() - startDate.getMonth();
+            let days = now.getDate() - startDate.getDate();
+
+            if (days < 0) { 
+                months--; 
+                days += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); 
+            }
+            if (months < 0) { 
+                years--; 
+                months += 12; 
+            }
+
+            const diffTime = now - startDate;
+            const totalSeconds = Math.max(0, Math.floor(diffTime / 1000));
+            const hours = Math.floor((totalSeconds / 3600) % 24);
+            const minutes = Math.floor((totalSeconds / 60) % 60);
+            const seconds = totalSeconds % 60;
+
+            document.getElementById("timer").innerHTML = `
+                <div class="time-unit"><span>${Math.max(0, years)}</span><label>سنة</label></div>
+                <div class="time-unit"><span>${Math.max(0, months)}</span><label>شهر</label></div>
+                <div class="time-unit"><span>${Math.max(0, days)}</span><label>يوم</label></div>
+                <div class="time-unit"><span>${hours}</span><label>ساعة</label></div>
+                <div class="time-unit"><span>${minutes}</span><label>دقيقة</label></div>
+                <div class="time-unit"><span>${seconds}</span><label>ثانية</label></div>
+            `;
+        }
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        function showMsg() {
+            document.getElementById("final-message").style.display = "flex";
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
